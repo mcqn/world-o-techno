@@ -10,10 +10,10 @@
 # GPS ruby code derived from https://github.com/ndarilek/rb-gps
 #
 
-require '/home/pi/world-o-techno/gps/gps.rb'
+require '/home/pi/world-o-techno/meshtastic-gps.rb'
 use_debug false
 
-gps = Gps::Receiver.create('gpsd',:host => 'localhost', :port => 2947)
+gps = MeshtasticGPS.create('/dev/ttyACM0')
 
 gps.start
 
@@ -45,6 +45,7 @@ define :gotFix do
   #print gps
 
   if gps != nil 
+    gps.run()
     g = gps.latitude != nil && gps.latitude != 0
   end
 
