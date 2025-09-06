@@ -23,6 +23,7 @@ class MeshtasticGPS
         @serial_connection = SerialPort.open(@serial_port, 115200)
         if @serial_connection
             puts "Connected"
+            @serial_connection.read_timeout = 2
         else
             puts "ERROR: Failed to connect to GPS unit"
         end
