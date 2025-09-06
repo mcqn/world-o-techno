@@ -21,6 +21,11 @@ Check your GPS works with
 pi@raspberrypi:~$ cgps -s
 ```
 
+Install sonic-pi and rubygems
+```
+pi@raspberrypi:~$ sudo apt-get install sonic-pi ruby-rubygems
+```
+
 Install sonic-pi-cli to give Sonic Pi a command line (via https://github.com/Widdershin/sonic-pi-cli)
 ```
 pi@raspberrypi:~$ gem install sonic-pi-cli
@@ -40,3 +45,4 @@ lxterminal --command "/home/pi/world-o-techno/startup.sh"
 ```
 
 Now reboot your Pi and see if it works.
+
