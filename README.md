@@ -7,6 +7,18 @@ See http://www.jarkman.co.uk/catalog/robots/worldotechno.htm for hardware detail
 
 Check this repository out into ```/home/pi```
 
+Install sonic-pi and rubygems
+```
+pi@raspberrypi:~$ sudo apt-get install sonic-pi ruby-rubygems
+```
+
+Install sonic-pi-cli to give Sonic Pi a command line (via https://github.com/Widdershin/sonic-pi-cli)
+```
+pi@raspberrypi:~$ gem install sonic-pi-cli
+```
+
+### For USB serial devices
+
 Install gpsd (thanks to http://blog.retep.org/2012/06/18/getting-gps-to-work-on-a-raspberry-pi/) with
 ```
 pi@raspberrypi:~$ sudo apt-get install gpsd gpsd-clients python-gps
@@ -21,14 +33,11 @@ Check your GPS works with
 pi@raspberrypi:~$ cgps -s
 ```
 
-Install sonic-pi and rubygems
-```
-pi@raspberrypi:~$ sudo apt-get install sonic-pi ruby-rubygems
-```
+### For a Meshtastic T1000-E tracker module
 
-Install sonic-pi-cli to give Sonic Pi a command line (via https://github.com/Widdershin/sonic-pi-cli)
+Install the serialport gem so that `meshtastic-gps.rb` can use it
 ```
-pi@raspberrypi:~$ gem install sonic-pi-cli
+pi@raspberrypi:~$ gem install ruby-serialport
 ```
 
 ## Autostart
